@@ -73,23 +73,9 @@ ${color grey}RAM Usage:$color $mem - $memperc% ${membar 4}
 ${color grey}Swap Usage:$color $swap - $swapperc% ${swapbar 4}
 $hr
 ${color green}${voffset 5}AMD Ryzen 2700X 3.7Ghz:@ ${freq} MHz
-${color grey}CPU Cores:
-${color grey}CPU 0  ${color green}${cpu cpu1}% ${color white}${cpubar cpu1 18}
-${color grey}CPU 1  ${color green}${cpu cpu2}% ${color white}${cpubar cpu2 18}
-${color grey}CPU 2  ${color green}${cpu cpu3}% ${color white}${cpubar cpu3 18}
-${color grey}CPU 3  ${color green}${cpu cpu4}% ${color white}${cpubar cpu4 18}
-${color grey}CPU 4  ${color green}${cpu cpu5}% ${color white}${cpubar cpu5 18}
-${color grey}CPU 5  ${color green}${cpu cpu6}% ${color white}${cpubar cpu6 18}
-${color grey}CPU 6  ${color green}${cpu cpu7}% ${color white}${cpubar cpu7 18}
-${color grey}CPU 7  ${color green}${cpu cpu8}% ${color white}${cpubar cpu8 18}
-${color grey}CPU 8  ${color green}${cpu cpu9}% ${color white}${cpubar cpu9 18}
-${color grey}CPU 9  ${color green}${cpu cpu10}% ${color white}${cpubar cpu10 18}
-${color grey}CPU 10 ${color green}${cpu cpu11}% ${color white}${cpubar cpu11 18}
-${color grey}CPU 11 ${color green}${cpu cpu12}% ${color white}${cpubar cpu12 18}
-${color grey}CPU 12 ${color green}${cpu cpu13}% ${color white}${cpubar cpu13 18}
-${color grey}CPU 13 ${color green}${cpu cpu14}% ${color white}${cpubar cpu14 18}
-${color grey}CPU 14 ${color green}${cpu cpu15}% ${color white}${cpubar cpu15 18}
-${color grey}CPU 15 ${color green}${cpu cpu16}% ${color white}${cpubar cpu16 18}
+${color grey}${voffset 10}CPU Usage: ${cpu}% ${color white}${alignr}${voffset -14}${cpugraph 40,250 F57900 FCAF3E -t}
+${cpubar cpu1 10,45} ${cpubar cpu2 10,45} ${cpubar cpu3 10,45} ${cpubar cpu4 10,45} ${cpubar cpu5 10,45} ${cpubar cpu6 10,45} ${cpubar cpu7 10,45} ${cpubar cpu8 10,45}
+${cpubar cpu9 10,45} ${cpubar cpu10 10,45} ${cpubar cpu11 10,45} ${cpubar cpu12 10,45} ${cpubar cpu13 10,45} ${cpubar cpu14 10,45} ${cpubar cpu15 10,45} ${cpubar cpu16 10,45}
 $hr
 ${color grey}Processes:$color $processes  ${color grey}Running:$color $running_processes
 $hr
