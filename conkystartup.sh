@@ -1,3 +1,3 @@
 #!/bin/bash
-sleep 10
-conky -b &
+sleep 15
+conky -b -c /home/meggamorty/.conkycolors/conkyrc
