@@ -49,7 +49,7 @@ ${voffset -3}${cpubar cpu1 10,45} ${cpubar cpu2 10,45} ${cpubar cpu3 10,45} ${cp
 ${cpubar cpu9 10,45} ${cpubar cpu10 10,45} ${cpubar cpu11 10,45} ${cpubar cpu12 10,45} ${cpubar cpu13 10,45} ${cpubar cpu14 10,45} ${cpubar cpu15 10,45} ${cpubar cpu16 10,45}
 ${voffset 10}Memory ${hr 2}
 ${color grey}${voffset 7}${font conkycolors:size=16}e${font}${voffset -6} System:$color $memperc% ${voffset 3}${membar 4}
-${color grey}${voffset 4}${font conkycolors:size=16}e${font}${voffset -6} GPU:$color ${nvidia memperc}% ${voffset 3}${membar 4}
+${color grey}${voffset 4}${font conkycolors:size=16}e${font}${voffset -6} GPU:$color ${nvidia memperc}% ${voffset 3}${nvidiabar 4 memutil}
 ${color grey}${voffset 4}${font conkycolors:size=16}e${font}${voffset -6} Swap:$color $swapperc% ${voffset 3}${swapbar 4}
 ${voffset 12}Processes ${hr 2}
 ${voffset 6}${color grey}Total:$color $processes  ${color grey}Running:$color $running_processes
@@ -58,7 +58,7 @@ ${color lightgrey}${top name 1} ${top pid 1}${top cpu 1} ${top mem 1}
 ${color lightgrey}${top name 2} ${top pid 2}${top cpu 2} ${top mem 2}
 ${color lightgrey}${top name 3} ${top pid 3}${top cpu 3} ${top mem 3}
 ${voffset 12}${color white}Storage ${hr 2}
-${voffset 6}"/":$color${fs_used /}/${fs_size /} ${fs_bar 6 /}
+${voffset 6}"/":$color${fs_used /}/${fs_size /} ${fs_bar 10 /}
 # ${color grey}Networking:
 # Up:$color ${upspeedf wlan0} ${color grey} - Down:$color ${downspeedf}
 ]]
