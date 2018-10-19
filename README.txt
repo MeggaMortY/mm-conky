@@ -1,4 +1,8 @@
 # TODO
+Required packages:
+1. conky
+2. conky-color
+
 Basic order:
 
 1. install conky on the system
