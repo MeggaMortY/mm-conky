@@ -1,0 +1,66 @@
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 1,
+    cpu_avg_samples = 2,
+	default_color = 'white',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'DejaVu Sans Mono:size=12',
+    gap_x = 5,
+    gap_y = 60,
+    minimum_height = 5,
+	  minimum_width = 5,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    stippled_borders = 0,
+    update_interval = 1.0,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = false,
+    show_graph_range = false,
+
+    own_window_transparent = no,
+    own_window_colour = '2C001E'
+}
+
+conky.text = [[
+${alignc}${font conkycolorslogos:size=48}u${font}
+${alignc}${color grey}Up:$color $uptime
+${color white}${voffset 6}GPU ${hr 2}
+${color grey}${voffset 4}${font conkycolors:size=17}8${font}${voffset -6} Temp:  ${color white}${nvidia temp}°C
+${color grey}${voffset 4}${font conkycolors:size=17}d${font}${voffset -6} Usage: ${color white}${nvidia gpuutil}% ${voffset -38}${alignr}${color white}${nvidiagraph gpuutil 52,200 F57900 FCAF3E -t}
+${color white}${voffset 4}CPU ${hr 2}
+# ${color green}${voffset 5}AMD Ryzen 2700X 3.7Ghz
+${color grey}${voffset 7}${font conkycolors:size=16}l${font}${voffset -7} Freq:  ${color white}${freq} MHz
+${color grey}${voffset 4}${font conkycolors:size=17}8${font}${voffset -6} Temp:  ${color white}${hwmon 0 temp 1}°C
+${color grey}${voffset 4}${font conkycolors:size=17}d${font}${voffset -6} Usage: ${color white}${cpu}% ${color white}${alignr}${voffset -70}${offset -1}${cpugraph 85,200 F57900 FCAF3E -t}
+${voffset -3}${cpubar cpu1 10,45} ${cpubar cpu2 10,45} ${cpubar cpu3 10,45} ${cpubar cpu4 10,45} ${cpubar cpu5 10,45} ${cpubar cpu6 10,45} ${cpubar cpu7 10,45} ${cpubar cpu8 10,45}
+${cpubar cpu9 10,45} ${cpubar cpu10 10,45} ${cpubar cpu11 10,45} ${cpubar cpu12 10,45} ${cpubar cpu13 10,45} ${cpubar cpu14 10,45} ${cpubar cpu15 10,45} ${cpubar cpu16 10,45}
+${color white}${voffset 10}Memory ${hr 2}
+${color grey}${voffset 7}${font conkycolors:size=16}e${font}${voffset -6} System:$color ${voffset 3}${membar 4}
+${color grey}${voffset 4}${font conkycolors:size=16}e${font}${voffset -6} GPU:$color    ${voffset 3}${nvidiabar 4 memutil}
+${color grey}${voffset 4}${font conkycolors:size=16}e${font}${voffset -6} Swap:$color   ${voffset 3}${swapbar 4}
+${color white}${voffset 12}Processes ${hr 2}
+${voffset 6}${color grey}Total:$color $processes  ${color grey}Running:$color $running_processes
+${voffset 6}${color white}Name              PID   CPU%   MEM%
+${color lightgrey}${top name 1} ${top pid 1}${top cpu 1} ${top mem 1}
+${color lightgrey}${top name 2} ${top pid 2}${top cpu 2} ${top mem 2}
+${color lightgrey}${top name 3} ${top pid 3}${top cpu 3} ${top mem 3}
+${voffset 12}${color white}Storage ${hr 2}
+${voffset 6}"/":$color${fs_used /}/${fs_size /} ${fs_bar 10 /}
+# ${color grey}Networking:
+# Up:$color ${upspeedf wlan0} ${color grey} - Down:$color ${downspeedf}
+${voffset -160}
+]]
