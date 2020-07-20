@@ -1,3 +1,8 @@
+# Ubuntu System Monitor Widget
+
+<img src="/demo_gifs/mm_conky_usage.gif" width=700/>
+
+
 This is a conky script that will display useful information about the GPU, CPU, memory, running processes and total storage.
 
 ## Required packages (see installation)
@@ -13,6 +18,3 @@ This is a conky script that will display useful information about the GPU, CPU, 
 
 The monitoring panel will show up a few seconds after logging in.
 
-
-## Script in action
-![](conky_mm.gif)
